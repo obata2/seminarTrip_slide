@@ -1,0 +1,140 @@
+/* ベース設定 */
+body {
+  font-family: 'Yu Gothic', 'YuGothic', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* スライド全体にわずかな影と角丸を追加（洗練感の演出） */
+.reveal .slides {
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* スライド全体の共通スタイル */
+.reveal .slides section {
+  padding: 2rem 5vw; /* 左右は画面幅に応じて調整 */
+  overflow-y: auto; /* はみ出したらスクロールできるように */
+  text-align: left;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* タイトル */
+.reveal .slides section h1 {
+  font-size: 3.0rem;
+  margin-bottom: 1rem;
+  color: #004a99;
+}
+
+/* セクション見出し */
+.reveal .slides section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #004a99;
+  padding-left: 0.75rem;
+  color: #004a99;
+}
+
+/* リスト */
+.reveal .slides section ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #333;
+}
+.reveal .slides section li {
+  margin-bottom: 0.6em;  /* リスト要素どうしの間隔 */
+}
+
+/* 段落 */
+.reveal .slides section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.reveal .slides section p.small {
+  font-size: 1rem;
+}
+.reveal .slides section p.medium {
+  font-size: 1.5rem;
+}
+.reveal .slides section p.large {
+  font-size: 2.0rem;
+}
+
+.schedule dt {
+  float: left;
+  width: 5em;  /* 固定幅（必要に応じて調整） */
+  font-weight: bold;
+}
+.schedule dd {
+  margin-left: 6em;  /* dtの幅＋余白 */
+  margin-bottom: 0.5em;
+}
+
+/* 横並びの画像 */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1em;
+  align-items: stretch; /* 各子要素の高さを揃える */
+}
+
+.image-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 上部（画像）と下部（出典）に分離 */
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.image-block img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5em;
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #555;
+  word-break: break-word;
+}
+
+
+
+/* メディアクエリで調整 */
+@media (max-width: 768px) {
+  .reveal .slides section {
+    padding: 1.5rem 4vw;
+  }
+
+  .reveal .slides section h1 {
+    font-size: 2rem;
+  }
+
+  .reveal .slides section h2 {
+    font-size: 1.5rem;
+  }
+
+  .reveal .slides section ul {
+    font-size: 1rem;
+  }
+
+  .reveal .slides section p {
+    font-size: 1.05rem;
+  }
+}
